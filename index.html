@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Open Notebooks</title>
+<title>Open Notebooks</title>\<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎯</text></svg>">
 
 <!-- External libraries -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -46,7 +46,7 @@
 				<img src="{{product.iconUrl}}" width="50" class="mr-3">
 				<div class="media-body">
 					<h6 class="m-0">
-						<a href="{{product.website}}" target="_blank">{{product.name}}</a>
+						<a href="{{product.sharedURL}}" target="_blank">{{product.openNotebookTitle}}</a>
 					</h6>
 					<p class="m-0">{{product.shortDescription}}</p>
 					<p class="m-0 text-muted"><small>{{product.category}}</small></p>
@@ -67,7 +67,7 @@
 	<div class="container" id="products-container">
 		<!-- Loading indicator: this gets replaced when we have products -->
 		<div class="text-center p-5 m-5">
-			<div class="text-muted p-2">Loading products...</div>
+			<div class="text-muted p-2">Loading open notebooks...</div>
 			<div class="spinner-border text-primary" role="status"></div>
 		</div>
 	</div>
