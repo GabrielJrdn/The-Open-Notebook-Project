@@ -47,7 +47,7 @@ function drawCategories() {
 }
 
 function showAllProducts() {
-	this.title = "All Open Notebooks";
+	this.title = "All Open Notebook";
 	drawProducts(this.products);
 }
 

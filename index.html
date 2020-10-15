@@ -28,7 +28,7 @@
 					</li>
 				{{#each this as |category|}}
 					<li class="nav-item">
-						<a class="nav-link" href="#" onclick="showCategory('{{category.name}}');">{{category.name}}</a>
+						<a class="nav-link" href="#" onclick="showCategory('{{category.name}}');">{{category.name}}s</a>
 					</li>
 				{{/each}}
 			</ul>
@@ -43,7 +43,9 @@
 
 <!-- Template for the notebooks -->
 <script id="products-template" type="text/x-handlebars-template">
-	<h3>{{title}}</h3>
+	<div class="text-muted">A directory of public GoodNotes notebooks that you can join and edit together with other people
+		</div>
+	<h3>{{title}}s</h3>
 	<div class="shadow-sm bg-white rounded-lg">
 		{{#each this.products as |product|}}
 			<div class="media border-bottom p-3" id="product-{{product.id}}">
