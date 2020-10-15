@@ -17,7 +17,7 @@
 <!-- Template for the main menu / categories -->
 <script id="menu-template" type="text/x-handlebars-template">
 	<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm mb-4">
-		<a class="navbar-brand" href="#" onclick="showAllProducts();">The Open Notebook Project</a>
+		<a class="navbar-brand" href="#" onclick="showAllProducts();">The Open Notebook Project 📖</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
@@ -54,6 +54,7 @@
 					</h6>
 					<p class="m-0">{{product.shortDescription}}</p>
 					<p class="m-0 text-muted"><small>{{product.category}}</small></p>
+					<p class="m-0 text-muted"><small>By: {{product.nickname}}</small></p>
 				</div>
 				<button class="btn btn-outline-primary" onclick="upvoteProduct({{product.id}});" {{#if product.hasVoted}}disabled{{/if}}>
 					&#x21e7; {{product.votes}}
