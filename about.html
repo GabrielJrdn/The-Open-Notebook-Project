@@ -13,72 +13,17 @@
 <!-- Template stuff -->
 <link rel="stylesheet" href="styles.css">
 <script src="main.js"></script>
-
-<!-- Template for the main menu / categories -->
-<script id="menu-template" type="text/x-handlebars-template">
-	<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm mb-4">
-		<a class="navbar-brand" href="#" onclick="showAllProducts();">The Open Notebook Project</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarNav">
-			<ul class="navbar-nav">
-					<li class="nav-item">
-						<a class="nav-link" href="#" onclick="showAllProducts();">All</a>
-					</li>
-				{{#each this as |category|}}
-					<li class="nav-item">
-						<a class="nav-link" href="#" onclick="showCategory('{{category.name}}');">{{category.name}}</a>
-					</li>
-				{{/each}}
-			</ul>
-			<ul class="navbar-nav ml-auto">
-				<li class="nav-item">
-					<a href="https://forms.gle/MS7gq4XtfwbD88wo9" target="blank" class="btn btn-outline-primary">Submit an Open Notebook</a>
-				</li>
-			</ul>
-		</div>
-	</nav>
-</script>
-
-<!-- Template for the notebooks -->
-<script id="products-template" type="text/x-handlebars-template">
-	<h3>{{title}}</h3>
-	<div class="shadow-sm bg-white rounded-lg">
-		{{#each this.products as |product|}}
-			<div class="media border-bottom p-3" id="product-{{product.id}}">
-				<img src="{{product.iconUrl}}" width="50" class="mr-3">
-				<div class="media-body">
-					<h6 class="m-0">
-						<a href="{{product.sharedLink}}" target="blank">{{product.openNotebookTitle}}</a>
-					</h6>
-					<p class="m-0">{{product.shortDescription}}</p>
-					<p class="m-0 text-muted"><small>{{product.category}}</small></p>
-				</div>
-				<button class="btn btn-outline-primary" onclick="upvoteProduct({{product.id}});" {{#if product.hasVoted}}disabled{{/if}}>
-					&#x21e7; {{product.votes}}
-				</button>
-			</div>
-		{{/each}}
-		{{#unless this.products}}
-			<p class="p-5 text-center text-muted">No open notebooks found</p>
-		{{/unless}}
-	</div>
-</script>
-</head>
-<body class="bg-light">
-	<div id="menu-container"></div>
-	<div class="container" id="products-container">
-		<!-- Loading indicator: this gets replaced when we have products -->
-		<div class="text-center p-5 m-5">
-			<div class="text-muted p-2">Loading open notebooks...</div>
-			<div class="spinner-border text-primary" role="status"></div>
-		</div>
+	<div class="text-center p-5 m-5">
+		<h4>About The Open Notebook Project</h4>
+		<div class="text-muted text-center text-justified p-3">The Open Notebook Project is a collection of shared GoodNotes documents that everyone can contribute to. Find shared notebooks by other people and edit them together. Upload your own and wait for the world to join. You can use it to play games like Tic Tac Toe together, make lists, share your sketches, create a public database of flash cards, and more.</div>
+		<div class="text-muted text-center p-3"><a href="index.html">Discover open notebooks</a></div>
+	<div class="text-center p-5 m-5">
+		<h5>Useful links</h5>
+			<div class="text-muted text-center p-3"><a href="https://www.goodnotes.com/shared-documents">Learn how to share GoodNotes documents</a></div>
+			<div class="text-muted text-center p-3"><a href="">Share your own open notebook</a></div>
+	</div>		
 	</div>
 	<div class="container" id="footer">
-	</div>
-	<div class="container" id="footer">
-		<div class="text-muted text-center p-3"><a href="https://twitter.com/gabrieljrdn">About the Open Notebook Project</a></div>
 		<div class="text-muted text-center p-3">Hacked with ❤️ by <a href="https://twitter.com/gabrieljrdn">Gabriel</a></div>
 
 	</div>
